@@ -3,9 +3,9 @@ package main;
 /**
  * Created by Administrator on 2017/6/22.
  */
-public class Hangman {
+public class Hangan {
     private String solution;
-    private String problem = "";
+    private String problem;
     private int triesTime = 12;
     public String generateSolution(){
         for (int i =  0; i < solution.length(); i++) {

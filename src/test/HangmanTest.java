@@ -1,6 +1,6 @@
 package test;
 
-import main.Hangman;
+import main.Hangan;
 import org.junit.Test;
 import org.junit.Before;
 
@@ -8,10 +8,10 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 public class HangmanTest {
-    private Hangman hangman;
+    private Hangan hangman;
     @Before
     public void setUp(){
-        hangman = new Hangman();
+        hangman = new Hangan();
         hangman.start("APPLE");
     }
     @Test
@@ -50,5 +50,4 @@ public class HangmanTest {
         assertTrue(hangman.gameOver());
 
     }
-
 }
