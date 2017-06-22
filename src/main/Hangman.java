@@ -5,20 +5,23 @@ package main;
  */
 public class Hangman {
     private String solution;
-    private String used = "AEIOU";
-    private String problem = "A___E";
+    private String problem = "";
     private int triesTime = 12;
+    public String generateSolution(){
+        for (int i =  0; i < solution.length(); i++) {
+            problem += "_";
+        }
+        return problem;
+    }
     public void start(String solution) {
         this.solution = solution;
+        generateSolution();
     }
     public int tries() {
         return triesTime;
     }
     public int length() {
         return solution.length();
-    }
-    public String used() {
-        return used;
     }
     public String problem() {
         return problem;
@@ -37,7 +40,6 @@ public class Hangman {
         if(!matched) {
             triesTime--;
         }
-        used += inputChar;
         return matched;
     }
     public boolean hasWon() {
