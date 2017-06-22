@@ -22,16 +22,14 @@ public class HangmanTest {
     }
     @Test
     public void should_able_try_correct_char() {
-        boolean matched = hangman.tryChar('P');
-        assertTrue(matched);
+        hangman.tryChar('P');
         assertEquals(12, hangman.tries());
         assertEquals(5, hangman.length());
         assertEquals("_PP__", hangman.problem());
     }
     @Test
     public void should_able_try_wrong_char() {
-        boolean matched = hangman.tryChar('K');
-      // assertFalse(matched);
+         hangman.tryChar('K');
         assertEquals(11, hangman.tries());
         assertEquals("_____", hangman.problem());
     }
